@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.newsettlement.settle.SettleActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivProgressImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/tvProgressTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/anim_processing" />
+
+            <TextView
+                android:id="@+id/tvProgressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Title"
+                android:textColor="@color/color_text_primary"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvProgressDesc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProgressImage" />
+
+            <TextView
+                android:id="@+id/tvProgressDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desc"
+                android:textColor="@color/color_text_primary_dark_1"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvProgressTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Content Layout-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_marginHorizontal="22dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Settlement Details"
+                android:textColor="@color/color_text_primary_dark"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/title"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilHost"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Select Host"
+                android:textColorHint="@color/color_text_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:cursorVisible="false"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Amex"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMerchant"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilHost"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Select Merchant"
+                android:textColorHint="@color/color_text_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilHost">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:cursorVisible="false"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Cargils Bakers"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilMerchant"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/color_light_blue"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilMerchant">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/tvSettlement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settlement Amount"
+                        android:textColor="@color/color_text_primary_dark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvSettlementAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_primary_dark_1"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSettle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/gradient_primary_btn_bg"
+                android:enabled="true"
+                android:letterSpacing="0"
+                android:text="Settle"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:layout_margin="1dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corner_primary_border"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/imgcurrancyimage"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="1dp"
+                android:text="image"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/txtcurrancydcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="USD"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+
+                <TextView
+                    android:id="@+id/txtamountdcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="0.25"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+</LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.sale.qr.QrActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Lanka QR Heading -->
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:id="@+id/cvQrHeader"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="54dp"
+            app:cardBackgroundColor="@color/lanka_qr_bg"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:src="@drawable/lanka_qr" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- QR -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvQr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:maxHeight="350dp"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvQrHeader">
+
+            <ImageView
+                android:id="@+id/ivQr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="-8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- QR progress bar-->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvQr"
+            app:layout_constraintEnd_toEndOf="@+id/cvQr"
+            app:layout_constraintStart_toStartOf="@+id/cvQr"
+            app:layout_constraintTop_toTopOf="@+id/cvQr" />
+
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/layoutSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/cvQr">
+
+            <!-- LANKA PAY-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layoutLankaPay"-->
+
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                tools:visibility="gone">-->
+
+<!--                <ImageView-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:scaleType="centerInside"-->
+<!--                    android:src="@drawable/lankapay" />-->
+
+<!--                <TextView-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:text="LankaPay"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+
+            <!-- VISA -->
+            <LinearLayout
+                android:id="@+id/layoutVisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/visa_logo_fill" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Visa"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="btnverifypayment"
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gradient_primary_btn_bg"
+            android:letterSpacing="0"
+            android:text="@string/btn_payment_verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

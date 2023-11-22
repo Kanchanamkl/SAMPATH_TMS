@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.common.merchant.MerchantSelectActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Select Host"
+            android:textColorHint="@color/color_text_primary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:cursorVisible="false"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text=""
+                android:textColor="@color/color_text_primary_dark"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            fontPath="fonts/Roboto-Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Select Merchant"
+            android:textColor="@color/color_text_primary_dark_1"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tilHost"
+            app:layout_constraintTop_toBottomOf="@+id/tilHost" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Search Merchant"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="textPersonName"
+            android:paddingBottom="20dp"
+            android:textColor="@color/color_text_primary"
+            android:textColorHint="@color/color_text_primary"
+            app:layout_constraintEnd_toEndOf="@+id/tilHost"
+            app:layout_constraintStart_toStartOf="@+id/tilHost"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSearch" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/gradient_primary_btn_bg"
+            android:enabled="true"
+            android:letterSpacing="0"
+            android:onClick="onClickContinue"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

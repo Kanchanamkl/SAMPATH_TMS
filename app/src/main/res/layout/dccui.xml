@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="                                                                                                                   "
+        android:textColor="@color/color_text_primary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Select Currency for DCC"
+        android:textColor="@color/color_text_primary"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/txtexchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exchange Rate"
+        android:textColor="@color/color_text_primary"
+        android:textSize="18sp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/txtmarkupvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark-Up Value"
+        android:textColor="@color/color_text_primary"
+        android:textSize="18sp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@+id/scrollviewmaindcc"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/laydccselection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

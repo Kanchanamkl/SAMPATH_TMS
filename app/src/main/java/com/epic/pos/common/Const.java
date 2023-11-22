@@ -1,0 +1,258 @@
+package com.epic.pos.common;
+
+public class Const {
+
+
+    public static int PROFILE_UPDATE_APP_ID = 1;
+    public static String EPIC_A_POS_DB = "epic_a_pos.db";
+
+    public static String EPIC_DCC_DB = "epic_dcc.db";
+    public static String EPIC_TRANSACTION_DB = "epic_transactions.db";
+    public static String EPIC_BASE_APP_DATA_PROVIDER = "com.epic.eatmca.data.PROVIDER";
+
+    public static final int MIN_BATTERY_LEVEL = 20;
+    public static final int DEFAULT_HOME_IDLE_COUNTDOWN = 1000 * 3;
+    public static final int CHECK_CARD_TIMEOUT = 15;
+    public static final int PIN_ENTER_TIMEOUT = 60;
+    public static final int CHECK_CARD_HOME_TIMEOUT = 20;
+    public static final int SERIAL_PORT_TIMEOUT = 1000 * 60;
+    public static boolean PRINT_ISO_MSG = false;
+    public static boolean PRINT_ENC_ISO_MSG = false;
+    public static boolean IS_LOG_WRITE_ON_FILE = false;
+    public static boolean IS_TLE_ENABLE = false;
+    public static final int INVOICE_NO_MAX_LEN = 6;
+    public static final int APPROVAL_CODE_LEN = 6;
+    public static final int SECONDS_BETWEEN_TXN = 2;
+    public static final boolean ENABLE_TAG_DATA_LOG = true;
+
+    public static final String TXN_DATE = "MMdd";
+    public static final String TXN_TIME = "HHmmss";
+    public static final String CARD_EXP_DATE_FORMAT = "yyMM";
+    public static final String CARD_DISPLAY_EXP_DATE_FORMAT = "MM/yy";
+
+    public static final String TXN_DATE_TIME = "yyyyMMdd HHmmss";
+    public static final String AUTO_SETTLE_DATE_FORMAT = "dd/MM/yy";
+    public static final String AUTO_SETTLE_TIME_FORMAT = "HHmmss";
+
+    public static final String RECEIPT_DATE_TIME_FORMAT = "yy/MM/dd hh:mm:ss a";
+
+    public static final String MSG_TXN_FAILED = "Transaction Failed";
+    public static final String MSG_TXN_TIME_OUT = "Card time out";
+    public static final String MSG_TXN_REQUEST_ERROR = "Transaction request error";
+    public static final String MSG_TXN_EMV_ERROR = "EMV verification error";
+    public static final String MSG_SETTLEMENT_PENDING = "Must settle";
+    public static final String MSG_HOST_NOT_SUPPORT_FOR_MERCHANT = "Card host not support for selected merchant.";
+    public static final String MSG_TERMINAL_NOT_FOUND_FOR_MERCHANT = "Terminal not found for the selected merchant.";
+    public static final String MSG_NO_MERCHANTS_FOR_SELECTED_HOST = "No merchants found for selected host.";
+    public static final String MSG_TXN_ONLINE_PROCESS_TERMINATE = "Online process terminated";
+    public static final String MSG_TXN_ONLINE_PROCESS_REFUSE = "Online process refuse";
+    public static final String MSG_TXN_ONLINE_PROCESS_TIMEOUT = "Card online process time out.";
+    public static final String MSG_CURRENCY_NOT_FOUND = "Currency record not found for this merchant.";
+    public static final String MSG_MERCHANT_NOT_FOUND = "Merchant record not found for this terminal.";
+    public static final String MSG_TERMINAL_NOT_FOUND = "Selected terminal record not found.";
+    public static final String MSG_ISSUER_NOT_FOUND = "Issuer not found for this card.";
+    public static final String MSG_HOST_NOT_FOUND = "Host not found for this card.";
+    public static final String MSG_DCC_ERRO = "DCC Data Not Found";
+    public static final String MSG_DCC_Failed = "DCC Request Failed";
+    public static final String MSG_MUST_SETTLE = "Please do the settlement to proceed.";
+    public static final String MSG_PROCESSING_BATCH = "Batch Upload being process...";
+    public static final String MSG_CARD_EXPIRED = "Card expired.";
+    public static final String MSG_NO_MERCHANTS = "No merchants exists.";
+    public static final String MSG_NO_TERMINALS_FOR_SELECTED_HOST = "No terminals exists for selected host.";
+    public static final String MSG_NO_RECORDS = "No more records.";
+    public static final String MSG_RECORDS_UPDATED = "Records are updated.";
+    public static final String MSG_CHECK_CONNECTION = "Please check the connection.";
+    public static final String MSG_CASH_ADVANCE_ENABLED = "Can't perform this transaction while \"Cash Advance\" is enabled.";
+    public static final String MSG_TCT_NOT_FOUND = "TCT record not found.";
+    public static final String MSG_TERMINAL_NOT_SUPPORT_FOR_INSTALLMENT = "Terminal not support for installment.";
+    public static final String MSG_INSTALLMENT_DISABLED = "Installment disabled for this terminal.";
+    public static final String MSG_NO_INSTALLMENT_TERMINALS_FOUND = "No installment terminals found.";
+    public static final String MSG_INSTALLMENT_ONLY_TERMINAL = "Terminal supports only for the installments.";
+    public static final String MSG_UNABLE_TO_PROCEED = "Unable to proceed";
+    public static final String MSG_NOT_PRE_AUTH_TXN = "Should select Pre Authorization transaction to proceed.";
+    public static final String MSG_INCORRECT_INVOICE_NO = "Incorrect invoice number.";
+    public static final String MSG_SELECT_PRE_AUTH_SALE = "Select Pre Authorization transaction to proceed.";
+    public static final String MSG_SETTLE_TO_PROCEED = "Please do the settlement to proceed.";
+    public static final String MSG_CLEAR_TXN_CONF = "Are you sure, you want to clear transaction batch for Host: #h# and Merchant: #m#";
+    public static final String MSG_TXN_BATCH_CLEAR = "Transaction batch cleared.";
+    public static final String MSG_PRE_AUTH = "Pre-Auth transactions can't be voided.";
+    public static final String MSG_CASH_BACK_VOID_ERROR = "Cash back transactions can't be voided.";
+    public static final String MSG_CASH_ADVANCE_ERROR = "Cash advance transactions can't be voided.";
+    public static final String MSG_REVERSAL_REQUEST = "Preparing Request";
+    public static final String MSG_VOID_REQUEST = "Sending Void Request";
+    public static final String MSG_PLEASE_WAIT = "Please wait...";
+    public static final String MSG_PLEASE_CHECK_THE_CARD_NO = "Please check the card number.";
+    public static final String MSG_PLEASE_DOWNLOAD_TLE_KEY = "Please download the TLE Key";
+    public static final String MSG_PROCESSING = "Processing";
+    public static final String MSG_PROCESSING_DESC = "Transaction being process...";
+    public static final String MSG_PROCEED_WITH_EXPIRED_CARD = "Expired card proceeded.";
+    public static final String MSG_MSG_FALLBACK = "Fallback, Please swipe the card.";
+    public static final String MSG_EMV_ERROR = "EMV Error";
+    public static final String MSG_PLEASE_INSERT_THE_CARD = "Please insert the card.";
+    public static final String MSG_CARD_NOT_SUPPORT = "Card not support.";
+    public static final String MSG_PLEASE_REMOVE_CARD = "Please remove card.";
+    public static final String MSG_CARD_READ_ERROR = "Card read error.";
+    public static final String MSG_FALLBACK_DISABLED = "Fallback is disabled.";
+    public static final String MSG_PIN_PAD_ERROR = "PIN pad error";
+    public static final String MSG_PRINT_ERROR = "Printer error";
+    public static final String MSG_RECEIPT_GENERATION_ERROR = "Unable to generate receipt.";
+    public static final String MSG_FEATURE_IS_DISABLED = "This feature is disabled.";
+    public static final String MSG_SALE_IS_DISABLED = "Sale feature is disabled.";
+    public static final String MSG_MAX_AMOUNT_EXCEEDED = "Maximum transaction amount exceeded.";
+    public static final String MSG_MAX_OFFLINE_AMOUNT_EXCEEDED = "Maximum Offline transaction amount exceeded.";
+    public static final String MSG_MAX_QR_AMOUNT_EXCEEDED = "Maximum QR transaction amount exceeded.";
+    public static final String MSG_MIN_QR_AMOUNT_EXCEEDED = "Minimum per QR transaction amount not reached";
+    public static final String MSG_CASH_BACK_AMOUNT_EXCEEDED = "Maximum cash back amount is #percentage#% to sale amount.";
+    public static final String MSG_MAX_TXN_LIMIT_REACHED = "Maximum transaction limit reached. Please settle.";
+    public static final String MSG_TERMINAL_DISABLED = "Terminal disabled.";
+    public static final String MSG_TXN_EMPTY = "No transactions found.";
+    public static final String MSG_PRINTING_LAST_RECEIPT = "Printing last receipt";
+    public static final String MSG_LAST_SETTLEMENT_NOT_FOUND = "Last settlement receipt not found.";
+    public static final String MSG_PRINTING_RECEIPT = "Printing receipt";
+    public static final String MSG_RECEIPT_GENERATE_FAILED = "Receipt generation failed.";
+    public static final String MSG_DIAGNOSTIC_REPORT_NOT_FOUND = "Diagnostic report not found.";
+    public static final String MSG_CHARGE_DEVICE = "Please wait until battery level is #p#%";
+    public static final String MSG_PROCESSING_SIGNATURE = "Processing signature.";
+    public static final String MSG_CRITICAL_MSG = "Please charge the device.";
+    public static final String MSG_CONFIG_MAP_CONFIRMATION = "Are you sure, you want to generate config map table?";
+    public static final String MSG_RESTORE_CONFIRMATION = "Are you sure, you want to restore transaction and reversal tables? All the current transactions and reversals will be lost in this action!";
+    public static final String MSG_EXPORT_CONFIRM = "Are you sure, you want to export data?";
+    public static final String MSG_OFFLINE_SALE_ERROR = "Offline sale request error.";
+    public static final String MSG_SETTLEMENT_ERROR = "Settlement request error.";
+    public static final String MSG_BATCH_UPLOAD_ERROR = "Batch upload request error.";
+    public static final String MSG_SETTLEMENT_REPORT_ERROR = "Settlement report generation failed.";
+    public static final String MSG_PRINT_DETAIL_REPORT = "Printing report";
+    public static final String MSG_INIT_SETTLEMENT = "Initializing Settlement";
+    public static final String MSG_SETTLEMENT_PROCESSING = "Settlement in Progress";
+    public static final String MSG_NO_REVERSALS = "No reversals exists.";
+    public static final String MSG_REVERSAL_ERROR = "Error occurred while sending reversal request.";
+    public static final String MSG_PRINTING_CANCEL_TXN_RECEIPT = "Printing cancel transaction receipt.";
+    public static final String MSG_FEATURE_DISABLED_FOR_BIN = "Transaction disabled for this BIN range.";
+    public static final String MSG_ENABLE_AUTO_TIMEZONE = "Enable auto time timezone setting to use this app.";
+
+    public static final String TITLE_VOID = "Void";
+    public static final String TITLE_PRE_COMP = "Pre-Completion";
+    public static final String TITLE_CLEAR_BATCH = "Clear Batch";
+    public static final String TITLE_SETTLEMENT = "Settlement";
+    public static final String TITLE_CLEAR_REVERSAL = "Clear Reversal";
+    public static final String TITLE_REVERSAL_REQ = "Reversal Request";
+    public static final String TITLE_CHECK_REVERSAL = "Reversal Request";
+
+    public static final String TXT_CARD_STATE_1 = "Swipe, Insert or Tap";
+    public static final String TXT_CARD_STATE_2 = "Swipe or Insert";
+    public static final String TXT_CARD_STATE_3 = "Insert or Tap";
+    public static final String TXT_CARD_STATE_4 = "Swipe or Tap";
+    public static final String TXT_CARD_STATE_5 = "Swipe";
+    public static final String TXT_CARD_STATE_6 = "Insert";
+    public static final String TXT_CARD_STATE_7 = "Tap";
+
+    public static final String CARD_TYPE_STRING_VISA = "VISA";
+    public static final String CARD_TYPE_STRING_MASTER = "MASTER";
+    public static final String CARD_TYPE_STRING_AMEX = "AMEX";
+    public static final String CARD_TYPE_STRING_JCB = "JCB";
+    public static final String CARD_TYPE_STRING_CUP = "UNIONPAY";
+    public static final String CARD_TYPE_STRING_QR= "QR";
+
+
+    public static final String RECEIPT_DIAGNOSTIC_REPORT = "DIAGNOSTIC-REPORT";
+    public static final String RECEIPT_SIM_PROVIDER = "SIM PROVIDER";
+    public static final String RECEIPT_SIM_NUM = "SIM NUMBER";
+    public static final String RECEIPT_TERMINAL_SERIAL = "TERMINAL SERIAL";
+    public static final String RECEIPT_ENCRYPTION_MODE = "ENCRYPTION MODE";
+    public static final String RECEIPT_ENCRYPTION = "ENCRYPTION";
+    public static final String RECEIPT_SNII = "SECURE NII";
+    public static final String RECEIPT_MID = "MERCHANT ID";
+    public static final String RECEIPT_TID = "TERMINAL ID";
+    public static final String RECEIPT_TPDU = "TPDU";
+    public static final String RECEIPT_NII = "NII";
+    public static final String RECEIPT_HOST_NAME = "HOST NAME";
+    public static final String RECEIPT_DUPLICATE = "DUPLICATE RECEIPT";
+    public static final String RECEIPT_DATE_TIME = "DATE/TIME";
+    public static final String RECEIPT_MERCHANT_ID = "MERCHANT ID";
+    public static final String RECEIPT_TERMINAL_ID = "TERMINAL ID";
+    public static final String RECEIPT_BATCH_NO = "BATCH NO.";
+    public static final String RECEIPT_INVOICE_NO = "INVOICE NO.";
+    public static final String RECEIPT_SALE = "SALE";
+    public static final String RECEIPT_OFFLINE_SALE = "OFFLINE SALE";
+    public static final String RECEIPT_OFFLINE_MANUAL_SALE = "OFFLINE MAN SALE";
+    public static final String RECEIPT_MANUAL_SALE = "MANUAL SALE";
+    public static final String RECEIPT_VOID_SALE = "VOID SALE";
+    public static final String RECEIPT_QR_SALE = "QR SALE";
+    public static final String RECEIPT_VOID = "VOID";
+    public static final String RECEIPT_AUTHONLY_SALE = "AUTH ONLY";
+    public static final String RECEIPT_AUTHONLY_VOID = "VOID AUTH ONLY";
+    public static final String RECEIPT_VOID_PRE_COMP = "VOID PRE-COMP";
+    public static final String RECEIPT_QR_VOID = "VOID QR SALE";
+    public static final String RECEIPT_PRE_COMP = "PRE-COMP";
+    public static final String RECEIPT_VOID_INSTALLMENT = "VOID INSTALLMENT";
+    public static final String RECEIPT_PRE_AUTH = "PRE AUTHORIZATION";
+    public static final String RECEIPT_INSTALLMENT = "INSTALLMENT";
+    public static final String RECEIPT_COMPLETION = "PRE COMPLETION";
+    public static final String RECEIPT_REFUND = "REFUND";
+    public static final String RECEIPT_AUTH_ONLY = "AUTH ONLY";
+    public static final String RECEIPT_QUASI_CASH = "QUASI CASH";
+    public static final String RECEIPT_QUASI_CASH_MANUAL = "QUASI CASH MANUAL";
+    public static final String RECEIPT_REFUND_MANUAL = "REFUND MANUAL";
+    public static final String RECEIPT_CASH_BACK = "CASH BACK";
+    public static final String RECEIPT_VOID_REFUND = "VOID REFUND";
+    public static final String RECEIPT_VOID_QUASI_CASH = "VOID QUASI CASH";
+    public static final String RECEIPT_VOID_OFFLINE_SALE = "VOID OFFLINE SALE";
+    public static final String RECEIPT_VOID_CASH_ADVANCE = "VOID CASH ADVANCE";
+    public static final String RECEIPT_CASH_ADVANCE = "CASH ADVANCE";
+    public static final String RECEIPT_CARD_NO = "CARD NO.";
+    public static final String RECEIPT_EXP_DATE = "EXPIRY DATE";
+    public static final String RECEIPT_CARD_TYPE = "CARD TYPE";
+    public static final String RECEIPT_APPR_CODE = "APPR CODE";
+    public static final String RECEIPT_REF_NO = "REFERENCE NO";
+    public static final String RECEIPT_STD_REF_NO = "STD REF";
+    public static final String BASE_AMOUNT = "BASE AMOUNT";
+    public static final String CASH_BACK = "CASH BACK";
+    public static final String RECEIPT_AMOUNT = "TOTAL";
+    public static final String RECEIPT_SIGNATURE = "SIGNATURE (CARD HOLDER)";
+    public static final String RECEIPT_TERMS_TXT_1 = "I AGREE TO PAY THE ABOVE TOTAL AMOUNT";
+    public static final String RECEIPT_TERMS_TXT_2 = "ACCORDING TO THE CARD ISSUER AGREEMENT";
+    public static final String RECEIPT_SIG_NOT_REQUIRED = "SIGNATURE NOT REQUIRED";
+    public static final String RECEIPT_PIN_VERIFIED = "PIN VERIFIED";
+    public static final String NO_CVM_REQUIRED = "NO CVM REQUIRED";
+    public static final String PIN_PAD_TITLE = "CARD PIN REQUIRED";
+    public static final String CUSTOMER_COPY = "***** CUSTOMER COPY *****";
+    public static final String MERCHANT_COPY = "***** MERCHANT COPY *****";
+    public static final String THANK_YOU = "THANK YOU!";
+    public static final String VOID_MERCHANT_COPY = "MERCHANT COPY";
+    public static final String VOID_CUSTOMER_COPY = "CUSTOMER COPY";
+
+    public static final String KEY_PIN_BLOCK = "key_pb";
+
+
+    public static final String RECEIPT_DETAIL_REPORT = "Detail Report";
+    public static final String RECEIPT_HOST = "Host";
+    public static final String RECEIPT_CARD_NAME = "Card Name";
+    public static final String RECEIPT_TRANSACTION_DATE = "Transaction Date";
+    public static final String RECEIPT_TRANSACTION_TIME = "Transaction Time";
+    public static final String RECEIPT_TRANSACTION = "Transaction";
+    public static final String RECEIPT_APPROVE_CODE = "Approve Code";
+    public static final String RECEIPT_USERNAME = "Username";
+
+    public static final String RECEIPT_SUMMARY_REPORT = "Summary Report";
+    public static final String RECEIPT_COUNT = "Count";
+    public static final String RECEIPT_SETTLEMENT = "Settlement";
+    public static final String RECEIPT_TOTAL = "Total";
+    public static final String RECEIPT_TOTALS = "Totals";
+    public static final String RECEIPT_TOTAL_LKR = "Total (LKR)";
+    public static final String RECEIPT_SETTLEMENT_SUCCESS = "SETTLEMENT SUCCESSFUL";
+    public static final String RECEIPT_HOST_INFO_REPORT = "HOST INFO REPORT";
+    public static final String DATA_1 = "iJrPltZOrxHkvC2EgUkoXA==";
+    public static final String DATA_2 = "qNZucEEMSjGITG804L6A/Q==";
+    public static final String DATA_3 = "eSjxwuzwjweijx8d34dr/E==";
+
+    public static final String BROADCAST_ACTION_NOTIFY = "com.epic.pos.action_activity_notify";
+    public static final String BROADCAST_EXTRA_ACTION = "com.epic.pos.broadcast_action";
+    public static final String BROADCAST_EXTRA_AUTO_SETTLEMENT = "com.epic.pos.auto_settlement";
+    public static final String BROADCAST_EXTRA_PROFILE_DOWNLOAD = "com.epic.pos.profile_download";
+    public static final String BROADCAST_EXTRA_TERMINAL_DISABLE = "com.epic.pos.terminal_disabled";
+    public static final String BROADCAST_EXTRA_GENERATE_CONFIG_MAP = "com.epic.pos.generate_config_map";
+
+
+    public static final String[] TABLES = {"MIT", "TMIF", "IIT", "CST", "IHT", "TCT", "CDT", "AID", "FEATURE","USER"};
+
+}

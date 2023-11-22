@@ -1,0 +1,206 @@
+<resources>
+    <string name="app_name">Sampath Bank</string>
+
+    <!--Allowed characters-->
+    <string name="allowed_chars_username" translatable="false">
+        abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+    </string>
+    <string name="allowed_chars_search" translatable="false">
+        abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+    </string>
+    <string name="allowed_chars_user_id" translatable="false">
+        abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+    </string>
+    <string name="allowed_chars_name" translatable="false">
+        abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+    </string>
+    <string name="allowed_chars_mobile" translatable="false">
+        0123456789+
+    </string>
+
+    <string name="allowed_chars_password" translatable="false">
+        0123456789
+    </string>
+
+    <string name="allowed_chars_role" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="allowed_chars_numbers">0123456789</string>
+
+    <!--Messages-->
+    <string name="msg_title_no_network">No internet connection!</string>
+    <string name="msg_turn_on_network">Please turn on network connection to continue.</string>
+    <string name="msg_whatsapp_not_found">Whatsapp app not installed.</string>
+    <string name="msg_emailapp_not_found">Email app not installed.</string>
+    <string name="msg_txn_failed">Transaction failed</string>
+    <string name="msg_signature_is_empty">Signature is empty</string>
+    <string name="msg_mer_copy_print_error">Merchant copy print error</string>
+    <string name="msg_cus_copy_print_error">Customer copy print error</string>
+    <string name="msg_receipt_error">Receipt error</string>
+    <string name="msg_processing">Processing</string>
+    <string name="msg_txn_processing_msg">Transaction being process…</string>
+    <string name="msg_txn_batch_upload_processing_msg">Batch upload being process…</string>
+    <string name="msg_reversal_failed">Reversal Failed</string>
+    <string name="msg_void_failed">Void Failed</string>
+    <string name="msg_reversal_failed_msg">Unable to process pending reversal</string>
+    <string name="msg_invalid_pw">Entered Password is Incorrect, Please Enter the Correct Password.</string>
+    <string name="msg_invalid_pw_username">Entered Password or UserName is Incorrect, Please Enter the Correct Password and Username</string>
+    <string name="msg_reversal_msg">Reversal record successfully cleared.</string>
+    <string name="msg_reversal_msg_no_records">No reversal records to clear.</string>
+    <string name="msg_auto_settlement_started">Auto settlement started.</string>
+    <string name="msg_terminal_disabled">Terminal disabled</string>
+    <string name="msg_terminal_enabled">Terminal enabled</string>
+    <string name="msg_battery_level">Battery is low. #bp#% remaining.</string>
+    <string name="msg_offline_req_failed">Offline Sale Request Failed</string>
+    <string name="msg_settlement_report_failed">Settlement Report Failed</string>
+    <string name="msg_settlement_success">Settlement Success</string>
+    <string name="msg_settlement_failed">Settlement Failed</string>
+    <string name="msg_auto_settle_completed">Auto settlement completed.</string>
+    <string name="msg_feed_paper">Feed paper into the printer and close.</string>
+
+    <!--Texts-->
+    <string name="text_settings">SETTINGS</string>
+    <string name="text_cancel">CANCEL</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_yes">YES</string>
+    <string name="btn_no">NO</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_retry">RETRY</string>
+    <string name="btn_payment_verify">Verify Payment</string>
+    <string name="amount_with_currency">Amount (#currency#)</string>
+    <string name="select_table">Select Table</string>
+    <string name="go_to">Go to</string>
+    <string name="row_no">Row No.</string>
+    <string name="save">Save</string>
+
+    <!--Activity Login-->
+    <string name="activity_login_hint_user_name">User Name</string>
+    <string name="activity_login_hint_password">Password</string>
+    <string name="activity_login_btn_login">Login</string>
+    <string name="activity_login_forgot_password">Forgot your password?</string>
+
+    <!--Dialog Progress-->
+    <string name="dialog_progress">POS</string>
+
+    <!--Activity Merchant Advice-->
+    <string name="activity_merchant_advice_summary">Summary</string>
+
+    <!--Toolbar Title-->
+    <string name="toolbar_login">BAEPPA</string>
+    <string name="toolbar_sale">Sale</string>
+    <string name="toolbar_settings">Settings</string>
+    <string name="toolbar_terminals">Terminals</string>
+    <string name="toolbar_key_inject">Key Inject</string>
+    <string name="toolbar_enter_pin">Enter PIN</string>
+    <string name="toolbar_tle_key_download">TLE Key Download</string>
+    <string name="toolbar_void">Void</string>
+    <string name="toolbar_pre_completion">Pre-Completion</string>
+    <string name="toolbar_settlement">Settlement</string>
+    <string name="toolbar_auto_settlement">Auto Settlement</string>
+    <string name="toolbar_edittable">Edit Table</string>
+    <string name="qr_verify">QR Verify</string>
+    <string name="qr_sale">QR Sale</string>
+    <string name="toolbar_setup">Set Up</string>
+    <string name="toolbar_any_receipt">Any Receipt</string>
+    <string name="toolbar_detail_report">Detail Report</string>
+    <string name="toolbar_summary_report">Summary Report</string>
+    <string name="toolbar_last_settlement">Last Settlement Report</string>
+    <string name="toolbar_card_scan">Card Scan</string>
+
+    <string name="place_holder_amount_0_00">0.00</string>
+
+    <!--Activity Card Scan-->
+    <string name="activity_card_scan_transaction_amount">Transaction Amount</string>
+    <string name="activity_card_scan_button_cancel">Cancel</string>
+    <string name="select_cdt_title">Select Card Type</string>
+    <string name="msg_card_not_support">Card not support!</string>
+    <string name="select_application">Select Application</string>
+    <string name="emv_error">EMV Error</string>
+    <string name="data_error">Error</string>
+
+    <!--Activity Amount-->
+    <string name="activity_amount_input_amount">Input Amount</string>
+    <string name="activity_amount_input_cashback_amount">Input Cash Back Amount</string>
+    <string name="activity_amount_btn_continue">Continue</string>
+
+    <!-- Receipt Activity -->
+    <string name="print_detail_report">Print Detail Report</string>
+    <string name="print_customer_copy">Print Customer Copy</string>
+    <string name="print_merchant_copy">Print Merchant Copy</string>
+
+    <!-- Receipt Activity -->
+    <string name="confirm">Confirm</string>
+    <string name="clear_signature">Clear Signature</string>
+    <string name="txn_success">Transaction Successful</string>
+    <string name="txn_amount">Transaction Amount</string>
+
+
+    <!-- Key Download Activity -->
+    <string name="enter_pin">Enter PIN</string>
+
+    <!-- Report Menu Activity -->
+    <string name="activity_report_menu_exit_app">Exit App</string>
+    <string name="activity_report_menu_settings">Settings</string>
+    <string name="activity_report_menu_reports">Reports</string>
+    <string name="activity_report_menu_print_last_receipt">Print Last Receipt</string>
+    <string name="activity_report_menu_last_settlement_receipt">Last Settlement Receipt</string>
+    <string name="activity_report_menu_any_receipt">Any Receipt</string>
+    <string name="activity_report_menu_detail_report">Detail Report</string>
+    <string name="activity_report_menu_summary_report">Summary Report</string>
+    <string name="activity_report_menu_host_info_report">Host Info Report</string>
+    <string name="activity_report_menu_host_diagnostic_report">Diagnostic Report</string>
+    <string name="activity_report_menu_download_dcc_data">Update DCC Data</string>
+
+    <!-- Key Inject Activity -->
+    <string name="btn_start_key_inject">Start Key Inject</string>
+    <string name="status_1">Press "Start Key Inject"</string>
+    <string name="debit_key_inject">Debit Key Inject</string>
+
+
+    <!-- Settings Activity -->
+    <string name="activity_settings_setup">Setup</string>
+    <string name="activity_settings_key_inject">Key Inject</string>
+    <string name="activity_settings_edit_table">Edit Table</string>
+    <string name="activity_settings_tle_key">TLE Key</string>
+    <string name="activity_settings_tms_parameters">TMS Parameters</string>
+    <string name="activity_settings_host_parameters">Host Parameters</string>
+    <string name="activity_settings_diagnostic_reports">Diagnostic Reports</string>
+
+    <!-- Password Activity -->
+    <string name="activity_password_confirm">Confirm</string>
+    <string name="activity_password_enter_password">Enter Password</string>
+
+    <!-- Settlement Details Activity -->
+    <string name="activity_settlement_details_report_msg_title">Print Detail Report</string>
+    <string name="activity_settlement_details_report_msg_message">Are you sure you want to print detail report?</string>
+    <string name="activity_settlement_details_report_msg_left_btn">Yes</string>
+    <string name="activity_settlement_details_report_msg_right_btn">No</string>
+    <string name="activity_settlement_details_report_msg_delete_pre_auth_title">Delete Pre-Auth Transactions</string>
+    <string name="activity_settlement_details_report_msg_delete_pre_auth_message">Are you sure you want to delete pre-auth transactions?</string>
+    <string name="activity_settlement_details_report_msg_delete_pre_auth_left_btn">Yes</string>
+    <string name="activity_settlement_details_report_msg_delete_pre_auth_right_btn">No</string>
+    <string name="activity_settlement_details_no_txn">Transaction Not Found</string>
+    <string name="msg_settlement_copy_print_error">Settlement copy print error</string>
+    <string name="msg_auto_settlement_failed">Auto Settlement Failed</string>
+    <string name="msg_detail_report_error">Detail Report Error</string>
+    <string name="msg_settlement_report_error">Settlement Report Error</string>
+    <!-- TE key download Activity -->
+    <string name="activity_download_tle_key">Download TLE Key</string>
+    <string name="activity_card_insert_tle">Insert TLE Card</string>
+
+    <!-- Tables -->
+    <string-array name="table_names">
+        <item>AID</item>
+        <item>CDT</item>
+        <item>CST</item>
+        <item>EPP</item>
+        <item>IHT</item>
+        <item>IIT</item>
+        <item>MIT</item>
+        <item>TCP</item>
+        <item>TCT</item>
+        <item>TFI</item>
+        <item>TLE</item>
+        <item>TMIF</item>
+        <item>FEATURE</item>
+    </string-array>
+</resources>

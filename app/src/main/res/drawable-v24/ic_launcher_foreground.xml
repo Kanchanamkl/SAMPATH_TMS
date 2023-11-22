@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <group android:scaleX="0.37125"
+      android:scaleY="0.37125"
+      android:translateX="18.36"
+      android:translateY="18.36">
+    <path
+        android:pathData="M0,0h192v192h-192z">
+        <aapt:attr name="android:fillColor">
+        <gradient 
+            android:gradientRadius="96"
+            android:centerX="96"
+            android:centerY="96"
+            android:type="radial">
+          <item android:offset="0" android:color="#FFFA9723"/>
+          <item android:offset="0.672043" android:color="#FFFB9319"/>
+          <item android:offset="1" android:color="#FFFEAE01"/>
+        </gradient>
+      </aapt:attr>
+    </path>
+    <path
+        android:pathData="M87.438,47.044V0H54.012V138.656H109.341C119.943,138.656 129.308,136.688 137.434,132.752C145.624,128.879 151.941,123.324 156.385,116.086C160.892,108.912 163.146,100.754 163.146,91.612C163.146,78.089 158.29,67.265 148.576,59.138C138.926,51.075 125.657,47.044 108.77,47.044H87.438ZM87.438,72.852H109.341C115.817,72.852 120.737,74.47 124.102,77.708C127.53,80.946 129.244,85.517 129.244,91.422C129.244,97.897 127.498,103.071 124.006,106.944C120.515,110.817 115.753,112.785 109.722,112.848H87.438V72.852Z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M69.426,151.898V191.947H36V60.286H91.329C101.931,60.286 111.296,62.255 119.422,66.191C127.612,70.063 133.929,75.619 138.373,82.856C142.881,90.03 145.134,98.188 145.134,107.33C145.134,120.853 140.278,131.678 130.564,139.804C120.914,147.867 107.645,151.898 90.758,151.898H69.426ZM69.426,126.091H91.329C97.805,126.091 102.725,124.472 106.09,121.234C109.518,117.996 111.232,113.425 111.232,107.521C111.232,101.045 109.486,95.871 105.995,91.998C102.503,88.126 97.741,86.158 91.71,86.094H69.426V126.091Z"
+        android:fillColor="#CC0001"/>
+  </group>
+</vector>

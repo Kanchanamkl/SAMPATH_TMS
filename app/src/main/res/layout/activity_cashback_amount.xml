@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        tools:context=".ui.sale.cashbackamount.CashbackAmountActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Amount View -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/clNumPad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/textView5"
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_amount_input_cashback_amount"
+                android:textColor="@color/color_text_primary"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/color_text_primary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAmount"
+                app:layout_constraintStart_toStartOf="@+id/textView5" />
+
+            <EditText
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLength="20"
+                android:text="@string/place_holder_amount_0_00"
+                android:textColor="@color/color_text_primary_dark"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/tvCurrency"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number Pad -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clNumPad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#335CACC0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        style="@style/keyboard_number_button"
+                        android:text="7" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        style="@style/keyboard_number_button"
+                        android:text="8" />
+
+                    <TextView
+                        android:id="@+id/tv9"
+                        style="@style/keyboard_number_button"
+                        android:text="9" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_keyboard_horizontal_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        style="@style/keyboard_number_button"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        style="@style/keyboard_number_button"
+                        android:text="5" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        style="@style/keyboard_number_button"
+                        android:text="6" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_keyboard_horizontal_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        style="@style/keyboard_number_button"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        style="@style/keyboard_number_button"
+                        android:text="2" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        style="@style/keyboard_number_button"
+                        android:text="3" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_keyboard_horizontal_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivReload"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        app:srcCompat="@drawable/ic_refresh" />
+
+                    <TextView
+                        android:id="@+id/tv0"
+                        style="@style/keyboard_number_button"
+                        android:text="0" />
+
+                    <ImageView
+                        android:id="@+id/ivDelete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        app:srcCompat="@drawable/ic_delete" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#335CACC0" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/clNumPad"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/clNumPad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clNumPad"
+                app:srcCompat="@drawable/ic_keyboard_vertical_line" />
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/clNumPad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/clNumPad"
+                app:srcCompat="@drawable/ic_keyboard_vertical_line" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:enabled="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/gradient_primary_btn_bg"
+            android:letterSpacing="0"
+            android:text="@string/activity_amount_btn_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

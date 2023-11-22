@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.epic.pos15",
+  "variantName": "nexgodevDebug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 6,
+      "versionName": "V1.06",
+      "outputFile": "app-nexgodev-debug.apk"
+    }
+  ],
+  "elementType": "File"
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.report.ReportMenuActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/btnSettings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp"
+                    android:text="@string/activity_report_menu_reports"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/tv_print_last_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_print_last_receipt"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_last_settlement_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_last_settlement_receipt"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_any_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_any_receipt"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_detail_report"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_summary_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_summary_report"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_host_info_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_host_info_report"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_update_dccdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:paddingLeft="24dp"
+                    android:visibility="gone"
+                    android:paddingTop="14dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/activity_report_menu_download_dcc_data"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_border_gray_btn"
+            android:foreground="?selectableItemBackground"
+            android:letterSpacing="0"
+            android:text="@string/activity_report_menu_settings"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text_primary"
+            android:textSize="24sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/btnExit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_border_light_blue_btn"
+            android:letterSpacing="0"
+            android:text="@string/activity_report_menu_exit_app"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text_primary_dark"
+            android:textSize="24sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

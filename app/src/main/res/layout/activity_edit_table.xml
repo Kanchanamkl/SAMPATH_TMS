@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:context=".ui.settings.edittable.EditTableActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTopContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/tvSelectTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/select_table"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Spinner -->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerTables"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:entries="@array/table_names"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectTable" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerTables"
+                app:layout_constraintStart_toStartOf="@+id/spinnerTables"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTables" />
+
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/back_btn_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="@+id/spinnerTables"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <ImageView
+                android:id="@+id/ivNext"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/next_btn_selector"
+                android:padding="16dp"
+                android:src="@drawable/ic_right_arrow"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerTables"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                app:layout_constraintEnd_toStartOf="@+id/ivNext"
+                app:layout_constraintStart_toEndOf="@+id/ivBack"
+                app:layout_constraintTop_toTopOf="@+id/ivBack">
+
+                <TextView
+                    android:id="@+id/tvGoTo"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/next_btn_selector"
+                    android:gravity="center"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:text="@string/go_to"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRowNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/row_no"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvGoTo"
+                    app:layout_constraintTop_toTopOf="@+id/tvGoTo" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRowNo"
+                    android:layout_width="80dp"
+                    android:layout_height="32sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:text="1"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvGoTo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRowNo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTopShadow"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/top_to_bottom_shaddow"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTopContent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/layoutBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTopContent" />
+
+        <!-- Bottom Section-->
+        <LinearLayout
+            android:id="@+id/layoutBottomShadow"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/bottom_to_top_shaddow"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/layoutBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/gradient_primary_btn_bg"
+                android:letterSpacing="0"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

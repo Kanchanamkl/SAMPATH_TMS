@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+<!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+    </style>
+    <style name="keyboard_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:textColor">@color/color_text_primary_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+
+    <style name="keyboard_number_button" parent="keyboard_button">
+        <item name="android:tag">number_button</item>
+    </style>
+
+
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+
+    <style name="MyFilePicker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/unicorn_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/unicorn_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/unicorn_colorPrimary</item>
+        <item name="android:navigationBarColor">@color/unicorn_colorPrimaryDark</item>
+
+        <!-- textColorPrimary is for toolbar title text  -->
+        <item name="android:textColorPrimary">@color/unicorn_black</item>
+
+        <!-- textColorSecondary is for toolbar action icons tint-->
+        <item name="android:textColorSecondary">@color/unicorn_black</item>
+
+        <item name="unicorn.colorAccent">@color/colorPrimary</item>
+        <item name="unicorn.fabColor">@color/colorPrimary</item>
+        <item name="unicorn.background">@color/unicorn_white</item>
+        <item name="unicorn.secondaryTextColor">@color/unicorn_black_70</item>
+        <item name="unicorn.primaryTextColor">@color/unicorn_black</item>
+        <item name="unicorn.file.heading">@color/unicorn_black</item>
+        <item name="unicorn.file.subHeading">@color/unicorn_black_70</item>
+        <item name="unicorn.file.iconTint">@color/unicorn_black</item>
+        <item name="unicorn.file.arrowIconTint">@color/unicorn_white</item>
+        <item name="unicorn.file.selectionTint">@color/unicorn_grey</item>
+    </style>
+</resources>

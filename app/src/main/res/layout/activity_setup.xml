@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.setup.SetUpActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- ISO packet print -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutIsoClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvIsoClearTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="ISO Print [Clear Packet]"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvIsoClearDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Prints the ISO standard clear packet"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swIsoClear"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+
+                <!-- ISO Encrypted packet print -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutIsoEncrypted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/swIsoEncrypted"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvIsoEncryptedTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="ISO Print [Enc Packet]"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvIsoEncryptedDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Prints the ISO standard TLE packet"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swIsoEncrypted"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <!-- ISO Encrypted packet print -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutLogEnable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/swWriteLogFiles"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="Write Logs Files"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This option will start wiring log files"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swWriteLogFiles"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <!-- Clear Batch -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutClearBatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvClearBatchTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="Clear Transaction Batch"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/ClearBatchDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Delete the transactions related to issuer and host"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <!-- TMS Parametors -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutTMSParams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvTmsParams"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="TMS parameters"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvTmsParamsDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View and edit TMS parameters"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+
+                <!-- TMS Parametors -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutConfigMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvConfigMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="Config Map"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvConfigMapDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Generate config map table"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <!-- Export Transactions -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutExportTxn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvExportTxn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="Export Transactions"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvExportTxnDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Export transactions in encrypted format"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <!-- Import Transactions -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutImportTransactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvImportTransactions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="Import Transactions"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvImportTransactionsDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Import transactions from encrypted file"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <!-- About -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16sp"
+                        android:paddingBottom="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvAboutTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:text="Version No:"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvAboutDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Build:"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/swIsoClear"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

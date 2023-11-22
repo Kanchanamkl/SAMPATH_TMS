@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.SettingsActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvSetup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_setting"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="18dp"
+                    android:text="@string/activity_settings_setup"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvKeyInject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_key_inject"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="18dp"
+                    android:text="@string/activity_settings_key_inject"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvEditTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_edit_table"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="18dp"
+                    android:text="@string/activity_settings_edit_table"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvTLEKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_tle_key"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="18dp"
+                    android:text="@string/activity_settings_tle_key"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvHostParameters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_host_param"
+                    android:visibility="gone"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="18dp"
+                    android:text="@string/activity_settings_host_parameters"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDiagnosticReports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_diagnostic_report"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="18dp"
+                    android:text="@string/activity_settings_diagnostic_reports"
+                    android:textColor="@color/color_text_primary_dark"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
